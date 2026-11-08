@@ -1,0 +1,1000 @@
+{
+  "dataset": "czn",
+  "selection_metric": "validation F1",
+  "paper_test_accuracy": 0.666,
+  "best": {
+    "clusters": 100,
+    "classifier": "logistic",
+    "minimum_transition_count": 2,
+    "metrics": {
+      "train": {
+        "precision": 0.7371323529411765,
+        "recall": 0.7371323529411765,
+        "f1": 0.7371323529411765,
+        "accepted_percentage": 1.0,
+        "cer": 0.01996040223649664
+      },
+      "eval": {
+        "precision": 0.6428571428571429,
+        "recall": 0.6428571428571429,
+        "f1": 0.6428571428571429,
+        "accepted_percentage": 1.0,
+        "cer": 0.029589328123512934
+      },
+      "test": {
+        "precision": 0.6426229508196721,
+        "recall": 0.6426229508196721,
+        "f1": 0.6426229508196721,
+        "accepted_percentage": 1.0,
+        "cer": 0.026310106512371315
+      },
+      "num_states": 362
+    }
+  },
+  "trials": [
+    {
+      "clusters": 50,
+      "classifier": "svm",
+      "minimum_transition_count": null,
+      "metrics": {
+        "train": {
+          "precision": 0.49816176470588236,
+          "recall": 0.49816176470588236,
+          "f1": 0.49816176470588236,
+          "accepted_percentage": 1.0,
+          "cer": 0.04469618734550185
+        },
+        "eval": {
+          "precision": 0.4675324675324675,
+          "recall": 0.4675324675324675,
+          "f1": 0.4675324675324675,
+          "accepted_percentage": 1.0,
+          "cer": 0.04767032019997075
+        },
+        "test": {
+          "precision": 0.5180327868852459,
+          "recall": 0.5180327868852459,
+          "f1": 0.5180327868852459,
+          "accepted_percentage": 1.0,
+          "cer": 0.04348644210279096
+        },
+        "num_states": 35
+      }
+    },
+    {
+      "clusters": 50,
+      "classifier": "svm",
+      "minimum_transition_count": 2,
+      "metrics": {
+        "train": {
+          "precision": 0.7334558823529411,
+          "recall": 0.7334558823529411,
+          "f1": 0.7334558823529411,
+          "accepted_percentage": 1.0,
+          "cer": 0.020372771232262783
+        },
+        "eval": {
+          "precision": 0.6363636363636364,
+          "recall": 0.6363636363636364,
+          "f1": 0.6363636363636364,
+          "accepted_percentage": 1.0,
+          "cer": 0.029812374553455916
+        },
+        "test": {
+          "precision": 0.6295081967213115,
+          "recall": 0.6295081967213115,
+          "f1": 0.6295081967213115,
+          "accepted_percentage": 1.0,
+          "cer": 0.027540750875184396
+        },
+        "num_states": 330
+      }
+    },
+    {
+      "clusters": 50,
+      "classifier": "svm",
+      "minimum_transition_count": 5,
+      "metrics": {
+        "train": {
+          "precision": 0.6865808823529411,
+          "recall": 0.6865808823529411,
+          "f1": 0.6865808823529411,
+          "accepted_percentage": 1.0,
+          "cer": 0.023256565880417003
+        },
+        "eval": {
+          "precision": 0.5714285714285714,
+          "recall": 0.5714285714285714,
+          "f1": 0.5714285714285714,
+          "accepted_percentage": 1.0,
+          "cer": 0.03350747236413851
+        },
+        "test": {
+          "precision": 0.6622950819672131,
+          "recall": 0.6622950819672131,
+          "f1": 0.6622950819672131,
+          "accepted_percentage": 1.0,
+          "cer": 0.025904299037598333
+        },
+        "num_states": 113
+      }
+    },
+    {
+      "clusters": 50,
+      "classifier": "svm",
+      "minimum_transition_count": 10,
+      "metrics": {
+        "train": {
+          "precision": 0.6590073529411765,
+          "recall": 0.6590073529411765,
+          "f1": 0.6590073529411765,
+          "accepted_percentage": 1.0,
+          "cer": 0.024580032568217187
+        },
+        "eval": {
+          "precision": 0.5714285714285714,
+          "recall": 0.5714285714285714,
+          "f1": 0.5714285714285714,
+          "accepted_percentage": 1.0,
+          "cer": 0.03351679993807612
+        },
+        "test": {
+          "precision": 0.6524590163934426,
+          "recall": 0.6524590163934426,
+          "f1": 0.6524590163934426,
+          "accepted_percentage": 1.0,
+          "cer": 0.024675182843986062
+        },
+        "num_states": 49
+      }
+    },
+    {
+      "clusters": 50,
+      "classifier": "logistic",
+      "minimum_transition_count": null,
+      "metrics": {
+        "train": {
+          "precision": 0.49356617647058826,
+          "recall": 0.49356617647058826,
+          "f1": 0.49356617647058826,
+          "accepted_percentage": 1.0,
+          "cer": 0.04446344483932976
+        },
+        "eval": {
+          "precision": 0.487012987012987,
+          "recall": 0.487012987012987,
+          "f1": 0.487012987012987,
+          "accepted_percentage": 1.0,
+          "cer": 0.04575992444721047
+        },
+        "test": {
+          "precision": 0.49508196721311476,
+          "recall": 0.49508196721311476,
+          "f1": 0.49508196721311476,
+          "accepted_percentage": 1.0,
+          "cer": 0.0452617573496137
+        },
+        "num_states": 35
+      }
+    },
+    {
+      "clusters": 50,
+      "classifier": "logistic",
+      "minimum_transition_count": 2,
+      "metrics": {
+        "train": {
+          "precision": 0.7334558823529411,
+          "recall": 0.7334558823529411,
+          "f1": 0.7334558823529411,
+          "accepted_percentage": 1.0,
+          "cer": 0.020487551022722972
+        },
+        "eval": {
+          "precision": 0.6233766233766234,
+          "recall": 0.6233766233766234,
+          "f1": 0.6233766233766234,
+          "accepted_percentage": 1.0,
+          "cer": 0.03149977217681413
+        },
+        "test": {
+          "precision": 0.6295081967213115,
+          "recall": 0.6295081967213115,
+          "f1": 0.6295081967213115,
+          "accepted_percentage": 1.0,
+          "cer": 0.02640489670603275
+        },
+        "num_states": 317
+      }
+    },
+    {
+      "clusters": 50,
+      "classifier": "logistic",
+      "minimum_transition_count": 5,
+      "metrics": {
+        "train": {
+          "precision": 0.6636029411764706,
+          "recall": 0.6636029411764706,
+          "f1": 0.6636029411764706,
+          "accepted_percentage": 1.0,
+          "cer": 0.023465198472129415
+        },
+        "eval": {
+          "precision": 0.6038961038961039,
+          "recall": 0.6038961038961039,
+          "f1": 0.6038961038961039,
+          "accepted_percentage": 1.0,
+          "cer": 0.030308782907007125
+        },
+        "test": {
+          "precision": 0.6459016393442623,
+          "recall": 0.6459016393442623,
+          "f1": 0.6459016393442623,
+          "accepted_percentage": 1.0,
+          "cer": 0.025223109563250697
+        },
+        "num_states": 100
+      }
+    },
+    {
+      "clusters": 50,
+      "classifier": "logistic",
+      "minimum_transition_count": 10,
+      "metrics": {
+        "train": {
+          "precision": 0.6580882352941176,
+          "recall": 0.6580882352941176,
+          "f1": 0.6580882352941176,
+          "accepted_percentage": 1.0,
+          "cer": 0.023991978965001246
+        },
+        "eval": {
+          "precision": 0.577922077922078,
+          "recall": 0.577922077922078,
+          "f1": 0.577922077922078,
+          "accepted_percentage": 1.0,
+          "cer": 0.03204538775237822
+        },
+        "test": {
+          "precision": 0.6622950819672131,
+          "recall": 0.6622950819672131,
+          "f1": 0.6622950819672131,
+          "accepted_percentage": 1.0,
+          "cer": 0.02432302740986341
+        },
+        "num_states": 52
+      }
+    },
+    {
+      "clusters": 100,
+      "classifier": "svm",
+      "minimum_transition_count": null,
+      "metrics": {
+        "train": {
+          "precision": 0.4954044117647059,
+          "recall": 0.4954044117647059,
+          "f1": 0.4954044117647059,
+          "accepted_percentage": 1.0,
+          "cer": 0.0442566302916373
+        },
+        "eval": {
+          "precision": 0.45454545454545453,
+          "recall": 0.45454545454545453,
+          "f1": 0.45454545454545453,
+          "accepted_percentage": 1.0,
+          "cer": 0.047626111535072436
+        },
+        "test": {
+          "precision": 0.4852459016393443,
+          "recall": 0.4852459016393443,
+          "f1": 0.4852459016393443,
+          "accepted_percentage": 1.0,
+          "cer": 0.04462646279294933
+        },
+        "num_states": 63
+      }
+    },
+    {
+      "clusters": 100,
+      "classifier": "svm",
+      "minimum_transition_count": 2,
+      "metrics": {
+        "train": {
+          "precision": 0.7325367647058824,
+          "recall": 0.7325367647058824,
+          "f1": 0.7325367647058824,
+          "accepted_percentage": 1.0,
+          "cer": 0.020086499925378334
+        },
+        "eval": {
+          "precision": 0.6298701298701299,
+          "recall": 0.6298701298701299,
+          "f1": 0.6298701298701299,
+          "accepted_percentage": 1.0,
+          "cer": 0.030839204866000516
+        },
+        "test": {
+          "precision": 0.6491803278688525,
+          "recall": 0.6491803278688525,
+          "f1": 0.6491803278688525,
+          "accepted_percentage": 1.0,
+          "cer": 0.026612298469954516
+        },
+        "num_states": 348
+      }
+    },
+    {
+      "clusters": 100,
+      "classifier": "svm",
+      "minimum_transition_count": 5,
+      "metrics": {
+        "train": {
+          "precision": 0.6847426470588235,
+          "recall": 0.6847426470588235,
+          "f1": 0.6847426470588235,
+          "accepted_percentage": 1.0,
+          "cer": 0.02311893881112103
+        },
+        "eval": {
+          "precision": 0.5909090909090909,
+          "recall": 0.5909090909090909,
+          "f1": 0.5909090909090909,
+          "accepted_percentage": 1.0,
+          "cer": 0.03274741192283051
+        },
+        "test": {
+          "precision": 0.6295081967213115,
+          "recall": 0.6295081967213115,
+          "f1": 0.6295081967213115,
+          "accepted_percentage": 1.0,
+          "cer": 0.026579020568767826
+        },
+        "num_states": 113
+      }
+    },
+    {
+      "clusters": 100,
+      "classifier": "svm",
+      "minimum_transition_count": 10,
+      "metrics": {
+        "train": {
+          "precision": 0.6636029411764706,
+          "recall": 0.6636029411764706,
+          "f1": 0.6636029411764706,
+          "accepted_percentage": 1.0,
+          "cer": 0.024797276287610765
+        },
+        "eval": {
+          "precision": 0.6103896103896104,
+          "recall": 0.6103896103896104,
+          "f1": 0.6103896103896104,
+          "accepted_percentage": 1.0,
+          "cer": 0.031309331004230105
+        },
+        "test": {
+          "precision": 0.6459016393442623,
+          "recall": 0.6459016393442623,
+          "f1": 0.6459016393442623,
+          "accepted_percentage": 1.0,
+          "cer": 0.025709137103035597
+        },
+        "num_states": 70
+      }
+    },
+    {
+      "clusters": 100,
+      "classifier": "logistic",
+      "minimum_transition_count": null,
+      "metrics": {
+        "train": {
+          "precision": 0.49356617647058826,
+          "recall": 0.49356617647058826,
+          "f1": 0.49356617647058826,
+          "accepted_percentage": 1.0,
+          "cer": 0.0444854522716261
+        },
+        "eval": {
+          "precision": 0.44805194805194803,
+          "recall": 0.44805194805194803,
+          "f1": 0.4480519480519481,
+          "accepted_percentage": 1.0,
+          "cer": 0.048737751218140675
+        },
+        "test": {
+          "precision": 0.4852459016393443,
+          "recall": 0.4852459016393443,
+          "f1": 0.4852459016393443,
+          "accepted_percentage": 1.0,
+          "cer": 0.045406856048752414
+        },
+        "num_states": 63
+      }
+    },
+    {
+      "clusters": 100,
+      "classifier": "logistic",
+      "minimum_transition_count": 2,
+      "metrics": {
+        "train": {
+          "precision": 0.7371323529411765,
+          "recall": 0.7371323529411765,
+          "f1": 0.7371323529411765,
+          "accepted_percentage": 1.0,
+          "cer": 0.01996040223649664
+        },
+        "eval": {
+          "precision": 0.6428571428571429,
+          "recall": 0.6428571428571429,
+          "f1": 0.6428571428571429,
+          "accepted_percentage": 1.0,
+          "cer": 0.029589328123512934
+        },
+        "test": {
+          "precision": 0.6426229508196721,
+          "recall": 0.6426229508196721,
+          "f1": 0.6426229508196721,
+          "accepted_percentage": 1.0,
+          "cer": 0.026310106512371315
+        },
+        "num_states": 362
+      }
+    },
+    {
+      "clusters": 100,
+      "classifier": "logistic",
+      "minimum_transition_count": 5,
+      "metrics": {
+        "train": {
+          "precision": 0.6783088235294118,
+          "recall": 0.6783088235294118,
+          "f1": 0.6783088235294118,
+          "accepted_percentage": 1.0,
+          "cer": 0.02315895582466693
+        },
+        "eval": {
+          "precision": 0.6038961038961039,
+          "recall": 0.6038961038961039,
+          "f1": 0.6038961038961039,
+          "accepted_percentage": 1.0,
+          "cer": 0.030510579491192874
+        },
+        "test": {
+          "precision": 0.6426229508196721,
+          "recall": 0.6426229508196721,
+          "f1": 0.6426229508196721,
+          "accepted_percentage": 1.0,
+          "cer": 0.025585082576894968
+        },
+        "num_states": 109
+      }
+    },
+    {
+      "clusters": 100,
+      "classifier": "logistic",
+      "minimum_transition_count": 10,
+      "metrics": {
+        "train": {
+          "precision": 0.6654411764705882,
+          "recall": 0.6654411764705882,
+          "f1": 0.6654411764705882,
+          "accepted_percentage": 1.0,
+          "cer": 0.024729567296338014
+        },
+        "eval": {
+          "precision": 0.6038961038961039,
+          "recall": 0.6038961038961039,
+          "f1": 0.6038961038961039,
+          "accepted_percentage": 1.0,
+          "cer": 0.03175769216687698
+        },
+        "test": {
+          "precision": 0.6491803278688525,
+          "recall": 0.6491803278688525,
+          "f1": 0.6491803278688525,
+          "accepted_percentage": 1.0,
+          "cer": 0.02558466837200949
+        },
+        "num_states": 70
+      }
+    },
+    {
+      "clusters": 150,
+      "classifier": "svm",
+      "minimum_transition_count": null,
+      "metrics": {
+        "train": {
+          "precision": 0.6461397058823529,
+          "recall": 0.6461397058823529,
+          "f1": 0.6461397058823529,
+          "accepted_percentage": 1.0,
+          "cer": 0.02503947787730479
+        },
+        "eval": {
+          "precision": 0.6038961038961039,
+          "recall": 0.6038961038961039,
+          "f1": 0.6038961038961039,
+          "accepted_percentage": 1.0,
+          "cer": 0.031097819632004444
+        },
+        "test": {
+          "precision": 0.6491803278688525,
+          "recall": 0.6491803278688525,
+          "f1": 0.6491803278688525,
+          "accepted_percentage": 1.0,
+          "cer": 0.025461923109563588
+        },
+        "num_states": 88
+      }
+    },
+    {
+      "clusters": 150,
+      "classifier": "svm",
+      "minimum_transition_count": 2,
+      "metrics": {
+        "train": {
+          "precision": 0.7389705882352942,
+          "recall": 0.7389705882352942,
+          "f1": 0.7389705882352943,
+          "accepted_percentage": 1.0,
+          "cer": 0.01974346756225822
+        },
+        "eval": {
+          "precision": 0.6038961038961039,
+          "recall": 0.6038961038961039,
+          "f1": 0.6038961038961039,
+          "accepted_percentage": 1.0,
+          "cer": 0.032654787816827534
+        },
+        "test": {
+          "precision": 0.639344262295082,
+          "recall": 0.639344262295082,
+          "f1": 0.639344262295082,
+          "accepted_percentage": 1.0,
+          "cer": 0.026156247558060133
+        },
+        "num_states": 326
+      }
+    },
+    {
+      "clusters": 150,
+      "classifier": "svm",
+      "minimum_transition_count": 5,
+      "metrics": {
+        "train": {
+          "precision": 0.6783088235294118,
+          "recall": 0.6783088235294118,
+          "f1": 0.6783088235294118,
+          "accepted_percentage": 1.0,
+          "cer": 0.022652864932223286
+        },
+        "eval": {
+          "precision": 0.6103896103896104,
+          "recall": 0.6103896103896104,
+          "f1": 0.6103896103896104,
+          "accepted_percentage": 1.0,
+          "cer": 0.02984576811209578
+        },
+        "test": {
+          "precision": 0.6295081967213115,
+          "recall": 0.6295081967213115,
+          "f1": 0.6295081967213115,
+          "accepted_percentage": 1.0,
+          "cer": 0.025571109363373992
+        },
+        "num_states": 126
+      }
+    },
+    {
+      "clusters": 150,
+      "classifier": "svm",
+      "minimum_transition_count": 10,
+      "metrics": {
+        "train": {
+          "precision": 0.6544117647058824,
+          "recall": 0.6544117647058824,
+          "f1": 0.6544117647058824,
+          "accepted_percentage": 1.0,
+          "cer": 0.02436125294718738
+        },
+        "eval": {
+          "precision": 0.6038961038961039,
+          "recall": 0.6038961038961039,
+          "f1": 0.6038961038961039,
+          "accepted_percentage": 1.0,
+          "cer": 0.031073108893007986
+        },
+        "test": {
+          "precision": 0.6327868852459017,
+          "recall": 0.6327868852459017,
+          "f1": 0.6327868852459017,
+          "accepted_percentage": 1.0,
+          "cer": 0.026376254892310977
+        },
+        "num_states": 93
+      }
+    },
+    {
+      "clusters": 150,
+      "classifier": "logistic",
+      "minimum_transition_count": null,
+      "metrics": {
+        "train": {
+          "precision": 0.6479779411764706,
+          "recall": 0.6479779411764706,
+          "f1": 0.6479779411764706,
+          "accepted_percentage": 1.0,
+          "cer": 0.025073171450066708
+        },
+        "eval": {
+          "precision": 0.5909090909090909,
+          "recall": 0.5909090909090909,
+          "f1": 0.5909090909090909,
+          "accepted_percentage": 1.0,
+          "cer": 0.032313270847455666
+        },
+        "test": {
+          "precision": 0.6459016393442623,
+          "recall": 0.6459016393442623,
+          "f1": 0.6459016393442623,
+          "accepted_percentage": 1.0,
+          "cer": 0.025593864634947734
+        },
+        "num_states": 88
+      }
+    },
+    {
+      "clusters": 150,
+      "classifier": "logistic",
+      "minimum_transition_count": 2,
+      "metrics": {
+        "train": {
+          "precision": 0.7408088235294118,
+          "recall": 0.7408088235294118,
+          "f1": 0.7408088235294119,
+          "accepted_percentage": 1.0,
+          "cer": 0.019571115088092186
+        },
+        "eval": {
+          "precision": 0.6298701298701299,
+          "recall": 0.6298701298701299,
+          "f1": 0.6298701298701299,
+          "accepted_percentage": 1.0,
+          "cer": 0.030375510559941674
+        },
+        "test": {
+          "precision": 0.639344262295082,
+          "recall": 0.639344262295082,
+          "f1": 0.639344262295082,
+          "accepted_percentage": 1.0,
+          "cer": 0.025594303283794334
+        },
+        "num_states": 332
+      }
+    },
+    {
+      "clusters": 150,
+      "classifier": "logistic",
+      "minimum_transition_count": 5,
+      "metrics": {
+        "train": {
+          "precision": 0.6773897058823529,
+          "recall": 0.6773897058823529,
+          "f1": 0.6773897058823529,
+          "accepted_percentage": 1.0,
+          "cer": 0.02279260718111073
+        },
+        "eval": {
+          "precision": 0.5974025974025974,
+          "recall": 0.5974025974025974,
+          "f1": 0.5974025974025974,
+          "accepted_percentage": 1.0,
+          "cer": 0.031049296726338684
+        },
+        "test": {
+          "precision": 0.6360655737704918,
+          "recall": 0.6360655737704918,
+          "f1": 0.6360655737704918,
+          "accepted_percentage": 1.0,
+          "cer": 0.025593610112839126
+        },
+        "num_states": 115
+      }
+    },
+    {
+      "clusters": 150,
+      "classifier": "logistic",
+      "minimum_transition_count": 10,
+      "metrics": {
+        "train": {
+          "precision": 0.65625,
+          "recall": 0.65625,
+          "f1": 0.65625,
+          "accepted_percentage": 1.0,
+          "cer": 0.0244199348017178
+        },
+        "eval": {
+          "precision": 0.6038961038961039,
+          "recall": 0.6038961038961039,
+          "f1": 0.6038961038961039,
+          "accepted_percentage": 1.0,
+          "cer": 0.031305019839204654
+        },
+        "test": {
+          "precision": 0.6491803278688525,
+          "recall": 0.6491803278688525,
+          "f1": 0.6491803278688525,
+          "accepted_percentage": 1.0,
+          "cer": 0.02551570317930025
+        },
+        "num_states": 93
+      }
+    },
+    {
+      "clusters": 200,
+      "classifier": "svm",
+      "minimum_transition_count": null,
+      "metrics": {
+        "train": {
+          "precision": 0.6433823529411765,
+          "recall": 0.6433823529411765,
+          "f1": 0.6433823529411765,
+          "accepted_percentage": 1.0,
+          "cer": 0.0245293571811384
+        },
+        "eval": {
+          "precision": 0.5844155844155844,
+          "recall": 0.5844155844155844,
+          "f1": 0.5844155844155844,
+          "accepted_percentage": 1.0,
+          "cer": 0.031877404280823314
+        },
+        "test": {
+          "precision": 0.639344262295082,
+          "recall": 0.639344262295082,
+          "f1": 0.639344262295082,
+          "accepted_percentage": 1.0,
+          "cer": 0.02560740907472168
+        },
+        "num_states": 107
+      }
+    },
+    {
+      "clusters": 200,
+      "classifier": "svm",
+      "minimum_transition_count": 2,
+      "metrics": {
+        "train": {
+          "precision": 0.7454044117647058,
+          "recall": 0.7454044117647058,
+          "f1": 0.7454044117647058,
+          "accepted_percentage": 1.0,
+          "cer": 0.019309122217725766
+        },
+        "eval": {
+          "precision": 0.6363636363636364,
+          "recall": 0.6363636363636364,
+          "f1": 0.6363636363636364,
+          "accepted_percentage": 1.0,
+          "cer": 0.029375256480869864
+        },
+        "test": {
+          "precision": 0.6426229508196721,
+          "recall": 0.6426229508196721,
+          "f1": 0.6426229508196721,
+          "accepted_percentage": 1.0,
+          "cer": 0.025917470579827656
+        },
+        "num_states": 313
+      }
+    },
+    {
+      "clusters": 200,
+      "classifier": "svm",
+      "minimum_transition_count": 5,
+      "metrics": {
+        "train": {
+          "precision": 0.6829044117647058,
+          "recall": 0.6829044117647058,
+          "f1": 0.6829044117647058,
+          "accepted_percentage": 1.0,
+          "cer": 0.022574768975149737
+        },
+        "eval": {
+          "precision": 0.5974025974025974,
+          "recall": 0.5974025974025974,
+          "f1": 0.5974025974025974,
+          "accepted_percentage": 1.0,
+          "cer": 0.030858297249624918
+        },
+        "test": {
+          "precision": 0.6360655737704918,
+          "recall": 0.6360655737704918,
+          "f1": 0.6360655737704918,
+          "accepted_percentage": 1.0,
+          "cer": 0.02545564801840445
+        },
+        "num_states": 128
+      }
+    },
+    {
+      "clusters": 200,
+      "classifier": "svm",
+      "minimum_transition_count": 10,
+      "metrics": {
+        "train": {
+          "precision": 0.6681985294117647,
+          "recall": 0.6681985294117647,
+          "f1": 0.6681985294117647,
+          "accepted_percentage": 1.0,
+          "cer": 0.02372359535341177
+        },
+        "eval": {
+          "precision": 0.6103896103896104,
+          "recall": 0.6103896103896104,
+          "f1": 0.6103896103896104,
+          "accepted_percentage": 1.0,
+          "cer": 0.03059070769632108
+        },
+        "test": {
+          "precision": 0.639344262295082,
+          "recall": 0.639344262295082,
+          "f1": 0.639344262295082,
+          "accepted_percentage": 1.0,
+          "cer": 0.025907003439452972
+        },
+        "num_states": 113
+      }
+    },
+    {
+      "clusters": 200,
+      "classifier": "logistic",
+      "minimum_transition_count": null,
+      "metrics": {
+        "train": {
+          "precision": 0.65625,
+          "recall": 0.65625,
+          "f1": 0.65625,
+          "accepted_percentage": 1.0,
+          "cer": 0.024445191214082743
+        },
+        "eval": {
+          "precision": 0.6038961038961039,
+          "recall": 0.6038961038961039,
+          "f1": 0.6038961038961039,
+          "accepted_percentage": 1.0,
+          "cer": 0.030553129533742916
+        },
+        "test": {
+          "precision": 0.6459016393442623,
+          "recall": 0.6459016393442623,
+          "f1": 0.6459016393442623,
+          "accepted_percentage": 1.0,
+          "cer": 0.025477102223103364
+        },
+        "num_states": 108
+      }
+    },
+    {
+      "clusters": 200,
+      "classifier": "logistic",
+      "minimum_transition_count": 2,
+      "metrics": {
+        "train": {
+          "precision": 0.7472426470588235,
+          "recall": 0.7472426470588235,
+          "f1": 0.7472426470588235,
+          "accepted_percentage": 1.0,
+          "cer": 0.019140759540637316
+        },
+        "eval": {
+          "precision": 0.6363636363636364,
+          "recall": 0.6363636363636364,
+          "f1": 0.6363636363636364,
+          "accepted_percentage": 1.0,
+          "cer": 0.029910435587477545
+        },
+        "test": {
+          "precision": 0.6459016393442623,
+          "recall": 0.6459016393442623,
+          "f1": 0.6459016393442623,
+          "accepted_percentage": 1.0,
+          "cer": 0.02526910558720037
+        },
+        "num_states": 354
+      }
+    },
+    {
+      "clusters": 200,
+      "classifier": "logistic",
+      "minimum_transition_count": 5,
+      "metrics": {
+        "train": {
+          "precision": 0.6783088235294118,
+          "recall": 0.6783088235294118,
+          "f1": 0.6783088235294118,
+          "accepted_percentage": 1.0,
+          "cer": 0.022610573603328285
+        },
+        "eval": {
+          "precision": 0.5909090909090909,
+          "recall": 0.5909090909090909,
+          "f1": 0.5909090909090909,
+          "accepted_percentage": 1.0,
+          "cer": 0.030727029707643086
+        },
+        "test": {
+          "precision": 0.6327868852459017,
+          "recall": 0.6327868852459017,
+          "f1": 0.6327868852459017,
+          "accepted_percentage": 1.0,
+          "cer": 0.025746393096034773
+        },
+        "num_states": 128
+      }
+    },
+    {
+      "clusters": 200,
+      "classifier": "logistic",
+      "minimum_transition_count": 10,
+      "metrics": {
+        "train": {
+          "precision": 0.6626838235294118,
+          "recall": 0.6626838235294118,
+          "f1": 0.6626838235294118,
+          "accepted_percentage": 1.0,
+          "cer": 0.023766879663493785
+        },
+        "eval": {
+          "precision": 0.5974025974025974,
+          "recall": 0.5974025974025974,
+          "f1": 0.5974025974025974,
+          "accepted_percentage": 1.0,
+          "cer": 0.031118903522322553
+        },
+        "test": {
+          "precision": 0.6459016393442623,
+          "recall": 0.6459016393442623,
+          "f1": 0.6459016393442623,
+          "accepted_percentage": 1.0,
+          "cer": 0.025432374850070275
+        },
+        "num_states": 111
+      }
+    }
+  ],
+  "unique_activations": 5750,
+  "elapsed_seconds": 168.8613259792328,
+  "torch_version": "2.4.1+cpu",
+  "cuda_available": false,
+  "cuda_version": null,
+  "arguments": {
+    "data_folder": "data/inflection",
+    "dataset": "czn",
+    "models_folder": "models",
+    "results_folder": "results\\final",
+    "run_name": "local-czn-transduction-seed0",
+    "features": true,
+    "merge_outputs": "bpe",
+    "full_domain_mode": "sample",
+    "alignment_iterations": 100,
+    "epochs": 200,
+    "batch_size": 128,
+    "d_model": 64,
+    "dropout": 0.1,
+    "learning_rate": 0.001,
+    "seed": 0,
+    "clusters": [
+      50,
+      100,
+      150,
+      200
+    ],
+    "thresholds": [
+      null,
+      2,
+      5,
+      10
+    ],
+    "search_n": 3,
+    "skip_training": true
+  }
+}

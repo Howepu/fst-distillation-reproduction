@@ -206,9 +206,11 @@ def split_state(
     # 3. SVM
     # print(f"Labels to split: {Counter(labels)}")
     if state_splitting_classifier == "svm":
-        clf = svm.LinearSVC(class_weight="balanced")
+        clf = svm.LinearSVC(class_weight="balanced", random_state=0)
     else:
-        clf = linear_model.LogisticRegression(class_weight="balanced", max_iter=1000)
+        clf = linear_model.LogisticRegression(
+            class_weight="balanced", max_iter=1000, random_state=0
+        )
 
     clf = clf.fit(np.stack(states_to_split), labels)
     preds = clf.predict(

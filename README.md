@@ -50,3 +50,38 @@ Datasets:
 - g2p
 - transliteration
 - historical normalization
+
+# Windows/Conda reproduction
+
+This repository includes a local offline runner for reproducing the
+morphological-inflection experiment without access to the authors' W&B
+project. The tested setup uses Python 3.11 and CPU-only PyTorch on Windows.
+
+```powershell
+git clone --recurse-submodules https://github.com/Howepu/fst-distillation-reproduction.git
+cd fst-distillation-reproduction
+
+conda env create -f environment.windows.yml
+conda run -n fst-distillation x86_64-w64-mingw32-gcc -O3 -Wall -Wextra `
+  -shared src/crpalign/align.c -o src/crpalign/libalign.so
+
+powershell -ExecutionPolicy Bypass -File scripts/prepare_inflection_data.ps1
+
+conda run -n fst-distillation python -m scripts.reproduce_local --dataset czn
+```
+
+Run the same pipeline for Ingrian (`izh`) with:
+
+```powershell
+conda run -n fst-distillation python -m scripts.reproduce_local `
+  --dataset izh --run-name local-izh-transduction-seed0
+```
+
+The data preparation script copies the train and development splits from the
+official SIGMORPHON 2020 submodule and the labeled test splits from its
+`GOLD-TEST` directory. Models are written to `models/` and extraction results
+to `results/`.
+
+The verified `czn` reproduction summary is available in
+`REPRODUCTION_REPORT.md`; machine-readable trial results and the selected
+PyFoma transducer are in `results/final/`.

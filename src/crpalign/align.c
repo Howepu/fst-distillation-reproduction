@@ -24,6 +24,73 @@
 #include <unistd.h>
 #include <getopt.h>
 
+/* MinGW does not provide a few POSIX/GNU helpers used by the original
+ * CRPAlign implementation.  Keep the Linux path unchanged and provide
+ * small compatibility implementations for native Windows builds. */
+#ifdef _WIN32
+static unsigned long long win_drand48_state = 0x1234abcd330eULL;
+
+static void win_srand48(long seed) {
+    win_drand48_state = (((unsigned long long)(unsigned long)seed) << 16) | 0x330eULL;
+}
+
+static double win_drand48(void) {
+    win_drand48_state = (0x5deece66dULL * win_drand48_state + 0xbULL)
+        & 0xffffffffffffULL;
+    return (double)win_drand48_state / 281474976710656.0;
+}
+
+static char *win_strndup(const char *source, size_t length) {
+    char *copy = (char *)malloc(length + 1);
+    if (copy == NULL) {
+        return NULL;
+    }
+    memcpy(copy, source, length);
+    copy[length] = '\0';
+    return copy;
+}
+
+static int win_getline(char **line, size_t *capacity, FILE *stream) {
+    size_t length = 0;
+    int character;
+
+    if (*line == NULL || *capacity == 0) {
+        *capacity = 128;
+        *line = (char *)malloc(*capacity);
+        if (*line == NULL) {
+            return -1;
+        }
+    }
+
+    while ((character = fgetc(stream)) != EOF) {
+        if (length + 1 >= *capacity) {
+            size_t new_capacity = *capacity * 2;
+            char *resized = (char *)realloc(*line, new_capacity);
+            if (resized == NULL) {
+                return -1;
+            }
+            *line = resized;
+            *capacity = new_capacity;
+        }
+        (*line)[length++] = (char)character;
+        if (character == '\n') {
+            break;
+        }
+    }
+
+    if (length == 0 && character == EOF) {
+        return -1;
+    }
+    (*line)[length] = '\0';
+    return (int)length;
+}
+
+#define drand48 win_drand48
+#define srand48 win_srand48
+#define strndup win_strndup
+#define getline win_getline
+#endif
+
 /* Yields minimum of three values */
 #define MIN3(a, b, c) ((a) < (b) ? ((a) < (c) ? (a) : (c)) : ((b) < (c) ? (b) : (c)))
 /* Compares three values, yielding -1, 0, 1 depending on if a, b, or c is the smallest */

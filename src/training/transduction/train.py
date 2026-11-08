@@ -1,5 +1,7 @@
 import logging
 import math
+import os
+import sys
 import tempfile
 from typing import Literal
 
@@ -14,7 +16,13 @@ from src.modeling.spectral_penalty import spectral_penalty
 from src.modeling.tokenizer import Tokenizer
 from src.training.shared import set_lr
 
-device = "cuda" if torch.cuda.is_available() else "mps"
+device = (
+    "cuda"
+    if torch.cuda.is_available()
+    else "mps"
+    if torch.backends.mps.is_available()
+    else "cpu"
+)
 
 logger = logging.getLogger(__file__)
 
@@ -97,7 +105,7 @@ def train(
     torch.manual_seed(seed)
     torch.cuda.manual_seed(seed)
     model = model.to(device)
-    if torch.cuda.is_available():
+    if torch.cuda.is_available() and sys.platform != "win32":
         model.compile(dynamic=True, options={"triton.cudagraphs": False})
     optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)  # type:ignore
     total_steps = epochs * len(train_dataloader)
@@ -181,10 +189,14 @@ def train(
         )
 
     # Upload checkpoint to wandb
-    temp_file = tempfile.NamedTemporaryFile(suffix="ckpt.pth")
-    torch.save(model.state_dict(), temp_file)
-    artifact = wandb.Artifact("final_checkpoint", type="model")
-    artifact.add_file(temp_file.name)
-    wandb.log_artifact(artifact)
+    with tempfile.NamedTemporaryFile(suffix="ckpt.pth", delete=False) as temp_file:
+        temp_path = temp_file.name
+    try:
+        torch.save(model.state_dict(), temp_path)
+        artifact = wandb.Artifact("final_checkpoint", type="model")
+        artifact.add_file(temp_path)
+        wandb.log_artifact(artifact)
+    finally:
+        os.unlink(temp_path)
 
     return eval_loss  # type:ignore
