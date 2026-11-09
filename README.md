@@ -85,3 +85,20 @@ to `results/`.
 The verified `czn` reproduction summary is available in
 `REPRODUCTION_REPORT.md`; machine-readable trial results and the selected
 PyFoma transducer are in `results/final/`.
+
+## Ingrian (`izh`) result
+
+The selected `izh` configuration and the extracted automaton are documented in
+[`IZH_EXPERIMENT_REPORT.md`](IZH_EXPERIMENT_REPORT.md). The configuration was
+selected by development-set accuracy; the test set was used only for final
+evaluation.
+
+Regenerate the state, transition, cluster, example, and CPU benchmark analysis:
+
+```powershell
+conda run -n fst-distillation python scripts/analyze_izh_fst.py
+```
+
+The final artifacts are `results/final/izh-best.fst`,
+`results/final/izh-local-reproduction.json`,
+`results/final/izh-analysis.json`, and `models/izh-selected-model.pt`.
