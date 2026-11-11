@@ -42,7 +42,7 @@ def load_examples_from_file(
     If the file includes two columns, treat the second column as a
     feature column (e.g. for inflection)."""
     examples: list[AlignedStringExample] = []
-    with open(path, "r") as f:
+    with open(path, "r", encoding="utf-8") as f:
         for line in f:
             row = line.strip().split("\t")
             if len(row) == 1:

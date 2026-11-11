@@ -153,7 +153,7 @@ def predict_full_domain(paths: Paths, model_shortname: str, batch_size: int):
     full_domain_predictions, _ = predict(
         model, full_domain_dataloader, tokenizer=tokenizer, max_length=1024
     )
-    with open(paths["full_domain_aligned"], "w") as f:
+    with open(paths["full_domain_aligned"], "w", encoding="utf-8") as f:
         for pred, original in zip(full_domain_predictions, full_domain_examples):
             decoded = tokenizer.decode(
                 pred, skip_special_tokens=False, return_as="list"

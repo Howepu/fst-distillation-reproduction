@@ -14,7 +14,7 @@ def load_examples_from_file(
 ):
     """Loads `String2StringExample` instances from a TSV file"""
     examples: list[String2StringExample] = []
-    with open(path, "r") as f:
+    with open(path, "r", encoding="utf-8") as f:
         for line in f:
             row = line.strip().split("\t")
             output_string = None

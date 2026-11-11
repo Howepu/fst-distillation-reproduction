@@ -1,0 +1,93 @@
+{
+  "dataset": "izh",
+  "selection_rule": "RNN by minimum dev loss; FST by maximum dev F1",
+  "test_used_for_selection": false,
+  "rnn": {
+    "requested_trials": 50,
+    "completed_trials": 50,
+    "best": {
+      "number": 17,
+      "value": 1.2121926205498832,
+      "params": {
+        "d_model": 128,
+        "dropout": 0.0,
+        "learning_rate": 0.0002,
+        "batch_size": 16,
+        "epochs": 400
+      },
+      "user_attrs": {
+        "checkpoint": "models\\izh-full-sweep-utf8\\izh-optuna-rnn-017\\model.pt",
+        "run_name": "izh-optuna-rnn-017"
+      },
+      "state": "COMPLETE",
+      "duration_seconds": 219.977094
+    }
+  },
+  "extraction": {
+    "requested_trials": 100,
+    "completed_trials": 100,
+    "max_clusters": 5336,
+    "best": {
+      "number": 43,
+      "value": 0.41964285714285715,
+      "params": {
+        "state_split_classifier": "svm",
+        "minimum_transition_count": 40,
+        "kmeans_num_clusters": 5333
+      },
+      "user_attrs": {
+        "dev_f1": 0.41964285714285715,
+        "num_states": 2177,
+        "train_f1": 0.926605504587156
+      },
+      "state": "COMPLETE",
+      "duration_seconds": 24.120022
+    }
+  },
+  "final_metrics": {
+    "train": {
+      "precision": 0.9252948885976409,
+      "recall": 0.9252948885976409,
+      "f1": 0.9252948885976409,
+      "accepted_percentage": 1.0,
+      "cer": 0.0031285017512351623
+    },
+    "eval": {
+      "precision": 0.41964285714285715,
+      "recall": 0.41964285714285715,
+      "f1": 0.41964285714285715,
+      "accepted_percentage": 1.0,
+      "cer": 0.035397712224771505
+    },
+    "test": {
+      "precision": 0.3794642857142857,
+      "recall": 0.3794642857142857,
+      "f1": 0.3794642857142857,
+      "accepted_percentage": 1.0,
+      "cer": 0.03761080547301492
+    },
+    "num_states": 2177
+  },
+  "artifacts": {
+    "model": "results\\izh-full-sweep-utf8\\izh-full-sweep-model.pt",
+    "fst": "results\\izh-full-sweep-utf8\\izh-full-sweep-best.fst",
+    "study_storage": "sqlite:///results/izh-full-sweep-utf8.db"
+  },
+  "elapsed_seconds_this_invocation": 9845.22967338562,
+  "torch_version": "2.4.1+cpu",
+  "cuda_available": false,
+  "arguments": {
+    "dataset": "izh",
+    "data_folder": "data/inflection",
+    "models_folder": "models/izh-full-sweep-utf8",
+    "results_folder": "results/izh-full-sweep-utf8",
+    "storage": "sqlite:///results/izh-full-sweep-utf8.db",
+    "rnn_trials": 50,
+    "extraction_trials": 100,
+    "rnn_trials_to_run": null,
+    "stop_after_rnn": false,
+    "seed": 0,
+    "worker_id": 0,
+    "alignment_iterations": 100
+  }
+}

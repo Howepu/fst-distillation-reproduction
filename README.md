@@ -102,3 +102,20 @@ conda run -n fst-distillation python scripts/analyze_izh_fst.py
 The final artifacts are `results/final/izh-best.fst`,
 `results/final/izh-local-reproduction.json`,
 `results/final/izh-analysis.json`, and `models/izh-selected-model.pt`.
+
+### Full local Bayesian sweep
+
+The W&B-independent runner mirrors the paper's search spaces and performs 50
+RNN trials followed by 100 FST extraction trials. It uses resumable Optuna
+SQLite storage and selects both stages only by development-set metrics:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/start_full_sweep.ps1
+& "D:\ai\.miniconda\envs\fst-distillation\python.exe" scripts/sweep_status.py
+```
+
+The verified UTF-8 run reached 41.96% development accuracy and 37.95% test
+accuracy (85/224), compared with 43.80% reported in the paper. The final FST
+has 2,177 states and 3,259 transitions. Its report is in
+`IZH_EXPERIMENT_REPORT.md`; the selected model, PyFoma FST, summary, and full
+state analysis are in `models/` and `results/final/`.

@@ -64,7 +64,7 @@ def run_alignment(
     for file_index in range(len(file_paths)):
         num_examples = len(examples_per_file[file_index])
         file_name = pathlib.Path(file_paths[file_index]).name + ".aligned"
-        with open(output_folder / file_name, "w") as f:
+        with open(output_folder / file_name, "w", encoding="utf-8") as f:
             for example_index in range(current_offset, current_offset + num_examples):
                 in_str, out_str = alignments[example_index]
                 aligned_tuples = "".join(
